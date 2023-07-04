@@ -38,15 +38,16 @@ console.log("3   ", reverseString("comburente"));
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
 function upperFirst(string) {
-  console.log();
-  let stringUp;
-  return (stringUp =
-    string.slice(0, 1).toUpperCase() +
-    string.slice(1, string.length).toLowerCase());
+  stringVector = string.split(" ");
+  for (let i = 0; i < stringVector.length; i++) {
+    stringVector[i] =
+      stringVector[i].slice(0, 1).toUpperCase() + stringVector[i].slice(1);
+  }
+  return stringVector.join(" ");
 }
-console.log("4   ", upperFirst("a TuTTI PIACe Il nUmero 7"));
+
+console.log("4   ", upperFirst("a tutti piace il numero sette"));
 
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
